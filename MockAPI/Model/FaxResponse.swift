@@ -6,12 +6,12 @@
 //
 
 import Foundation
-//import Combine
+import Combine
 
 // Define a protocol for the Fax API service
 protocol FaxAPIServiceProtocol {
-//    func sendFax(toNumber: String, fileData: Data, fileType: String) -> AnyPublisher<FaxResponse, Error> // Combine
-    func sendFax(toNumber: String, fileData: Data, fileType: String) async throws -> FaxResponse // Async/Await
+    func sendFax(toNumber: String, fileData: Data, fileType: String) -> AnyPublisher<FaxResponse, Error> // Combine
+//    func sendFax(toNumber: String, fileData: Data, fileType: String) async throws -> FaxResponse // Async/Await
 }
 
 // Define a model for the reponse.

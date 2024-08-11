@@ -13,6 +13,8 @@
 		8CE41A8B2C691BD30096343E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CE41A8A2C691BD30096343E /* Preview Assets.xcassets */; };
 		8CE41A922C691D9C0096343E /* FaxResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE41A912C691D9C0096343E /* FaxResponse.swift */; };
 		8CE41A972C691EAA0096343E /* FaxAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE41A962C691EAA0096343E /* FaxAPIService.swift */; };
+		8CE41A992C6936F30096343E /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE41A982C6936F20096343E /* MockAPIService.swift */; };
+		8CE41A9B2C6937720096343E /* FaxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE41A9A2C6937720096343E /* FaxViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		8CE41A8A2C691BD30096343E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8CE41A912C691D9C0096343E /* FaxResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaxResponse.swift; sourceTree = "<group>"; };
 		8CE41A962C691EAA0096343E /* FaxAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaxAPIService.swift; sourceTree = "<group>"; };
+		8CE41A982C6936F20096343E /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
+		8CE41A9A2C6937720096343E /* FaxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaxViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				8CE41A962C691EAA0096343E /* FaxAPIService.swift */,
+				8CE41A982C6936F20096343E /* MockAPIService.swift */,
+				8CE41A9A2C6937720096343E /* FaxViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,7 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE41A9B2C6937720096343E /* FaxViewModel.swift in Sources */,
 				8CE41A972C691EAA0096343E /* FaxAPIService.swift in Sources */,
+				8CE41A992C6936F30096343E /* MockAPIService.swift in Sources */,
 				8CE41A862C691BD20096343E /* ContentView.swift in Sources */,
 				8CE41A842C691BD20096343E /* MockAPIApp.swift in Sources */,
 				8CE41A922C691D9C0096343E /* FaxResponse.swift in Sources */,

@@ -6,18 +6,18 @@
 //
 
 import Foundation
-//import Combine
+import Combine
 
 class FaxAPIService: FaxAPIServiceProtocol {
     // Dummy url
     private let baseURL = "https://restapi.efaxcorporate.com/v1.0/faxes"
     
-//    func sendFax(toNumber: String, fileData: Data, fileType: String) -> AnyPublisher<FaxResponse, any Error> { // Comobine
-    func sendFax(toNumber: String, fileData: Data, fileType: String) async throws -> FaxResponse {  // Async/Await
+    func sendFax(toNumber: String, fileData: Data, fileType: String) -> AnyPublisher<FaxResponse, any Error> { // Comobine
+//    func sendFax(toNumber: String, fileData: Data, fileType: String) async throws -> FaxResponse {  // Async/Await
 
         guard let url = URL(string: baseURL) else {
-//            return Fail(error: URLError(.badURL)).eraseToAnyPublisher() // Combine
-            throw URLError(.badURL) // Async/Await
+            return Fail(error: URLError(.badURL)).eraseToAnyPublisher() // Combine
+//            throw URLError(.badURL) // Async/Await
         }
         
         var request = URLRequest(url: url)
@@ -32,25 +32,25 @@ class FaxAPIService: FaxAPIServiceProtocol {
         ]
 
         // Combine
-//        do {
-//            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
-//        } catch {
-//            return Fail(error: error).eraseToAnyPublisher()
-//        }
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
+        } catch {
+            return Fail(error: error).eraseToAnyPublisher()
+        }
 
         // Async/Await
-        request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
+//        request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
         
 
         // Combine
-//        return URLSession.shared.dataTaskPublisher(for: request)
-//            .map(\.data)
-//            .decode(type: FaxResponse.self, decoder: JSONDecoder())
-//            .eraseToAnyPublisher()
+        return URLSession.shared.dataTaskPublisher(for: request)
+            .map(\.data)
+            .decode(type: FaxResponse.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
 
         // Async/Await
-        let (data, _) = try await URLSession.shared.data(for: request)
-        return try JSONDecoder().decode(FaxResponse.self, from: data)
+//        let (data, _) = try await URLSession.shared.data(for: request)
+//        return try JSONDecoder().decode(FaxResponse.self, from: data)
     }
 }
 
