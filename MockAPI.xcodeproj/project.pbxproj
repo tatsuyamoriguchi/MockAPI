@@ -97,8 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				8CE41A962C691EAA0096343E /* FaxAPIService.swift */,
-				8CE41A982C6936F20096343E /* MockAPIService.swift */,
 				8CE41A9A2C6937720096343E /* FaxViewModel.swift */,
+				8CE41A982C6936F20096343E /* MockAPIService.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
